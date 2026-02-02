@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router";
 import Valentines from "../assets/sounds/Valentine.mp3";
+import heartImg from "../assets/heart.png";
 
 function App() {
   const [position, setPosition] = useState(null); // null = next to Yes; { top, left } = run away
@@ -111,7 +112,7 @@ function App() {
       )}
       <div className="w-full max-w-md flex justify-center">
         <img
-          src="/src/assets/heart.png"
+          src={heartImg}
           alt="heart icon"
           className="w-28 sm:w-36 md:w-44 lg:w-50 animate-float"
         />

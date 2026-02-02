@@ -6,6 +6,12 @@ import ParangPelikula from "../assets/sounds/Parang-Pelikula.mp3";
 import SoEasy from "../assets/sounds/So-Easy.mp3";
 import Uuwian from "../assets/sounds/Uuwian.mp3";
 import Tahanan from "../assets/sounds/Tahanan.mp3";
+import pic1 from "../assets/pictures/pic1.jpg";
+import pic2 from "../assets/pictures/pic2.jpg";
+import pic3 from "../assets/pictures/pic3.jpg";
+import pic4 from "../assets/pictures/pic4.jpg";
+import pic5 from "../assets/pictures/pic5.jpg";
+import pic6 from "../assets/pictures/pic6.jpg";
 
 const ContentPage = () => {
   const [selectedPicture, setSelectedPicture] = useState(null);
@@ -32,40 +38,40 @@ const ContentPage = () => {
 
   const pictures = [
     {
-      picture: "/src/assets/pictures/pic1.jpg",
+      picture: pic1,
       label: "Picture 1",
       description:
-        "You make my heart smile every single day. Happy Valentine’s.",
+        "You make my heart smile every single day. Happy Valentine's.",
       soundTrack: Inaasam,
     },
     {
-      picture: "/src/assets/pictures/pic2.jpg",
+      picture: pic2,
       label: "Picture 2",
       description: "With you, everything feels warmer, brighter, and right.",
       soundTrack: Kusapiling,
     },
     {
-      picture: "/src/assets/pictures/pic3.jpg",
+      picture: pic3,
       label: "Picture 3",
       description: "My favorite place is wherever you are.",
       soundTrack: ParangPelikula,
     },
     {
-      picture: "/src/assets/pictures/pic4.jpg",
+      picture: pic4,
       label: "Picture 4",
-      description: "Loving you is the easiest thing I’ve ever done.",
+      description: "Loving you is the easiest thing I've ever done.",
       soundTrack: SoEasy,
     },
     {
-      picture: "/src/assets/pictures/pic5.jpg",
+      picture: pic5,
       label: "Picture 5",
-      description: "You’re my today, my tomorrow, and my always.",
+      description: "You're my today, my tomorrow, and my always.",
       soundTrack: Uuwian,
     },
     {
-      picture: "/src/assets/pictures/pic6.jpg",
+      picture: pic6,
       label: "Picture 6",
-      description: "Every heartbeat whispers your name. Happy Valentine’s Day.",
+      description: "Every heartbeat whispers your name. Happy Valentine's Day.",
       soundTrack: Tahanan,
     },
   ];
