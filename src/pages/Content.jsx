@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll";
 import Heart from "../components/Heart";
 import Inaasam from "../assets/sounds/Inaasam.mp3";
 import Kusapiling from "../assets/sounds/Kusapiling.mp3";
@@ -35,6 +37,21 @@ const ContentPage = () => {
       audioRef.current = null;
     };
   }, [selectedPicture]);
+
+  const [emblaRef] = useEmblaCarousel(
+    { 
+      loop: true,
+      dragFree: true
+    },
+    [
+      AutoScroll({ 
+        speed: 1,
+        stopOnInteraction: false,
+        stopOnMouseEnter: false,
+        playOnInit: true  // Auto-starts immediately
+      })
+    ]
+  )
 
   const pictures = [
     {
@@ -96,22 +113,24 @@ const ContentPage = () => {
           <div className="relative overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-pink-200 to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-pink-200 to-transparent z-10 pointer-events-none" />
-            <div className="flex animate-marquee">
-              {[...pictures, ...pictures].map((pic, idx) => (
-                <div key={idx} className="shrink-0 px-4">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedPicture(pic)}
-                    className="overflow-hidden rounded-2xl border-2 border-pink-200/50 bg-white/60 shadow-xl backdrop-blur-sm w-48 sm:w-56 md:w-64 text-left cursor-pointer hover:border-pink-400/70 hover:shadow-2xl transition-all duration-300"
-                  >
-                    <img
-                      src={pic.picture}
-                      alt={pic.label}
-                      className="w-full aspect-3/4 object-cover block pointer-events-none"
-                    />
-                  </button>
-                </div>
-              ))}
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {[...pictures,...pictures].map((pic, idx) => (
+                  <div key={idx} className="shrink-0 px-4">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedPicture(pic)}
+                      className="overflow-hidden rounded-2xl border-2 border-pink-200/50 bg-white/60 shadow-xl backdrop-blur-sm w-48 sm:w-56 md:w-64 text-left cursor-pointer hover:border-pink-400/70 hover:shadow-2xl transition-all duration-300"
+                    >
+                      <img
+                        src={pic.picture}
+                        alt={pic.label}
+                        className="w-full aspect-3/4 object-cover block pointer-events-none"
+                      />
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

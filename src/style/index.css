@@ -49,31 +49,6 @@ body {
   animation-delay: 600ms;
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 10s linear infinite;
-}
-
-@media (max-width: 640px) { /* sm */
-  .animate-marquee {
-    animation: marquee 10s linear infinite;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 768px) { /* md */
-  .animate-marquee {
-    animation: marquee 10s linear infinite;
-  }
-}
-
 /* Lightbox: blurred backdrop + message animate */
 .lightbox-backdrop {
   background: rgba(255, 182, 193, 0.4);
