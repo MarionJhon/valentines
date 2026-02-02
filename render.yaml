@@ -8,10 +8,3 @@ services:
       - type: rewrite
         source: /*
         destination: /index.html
-```
-
-**OR** if you don't want to use `render.yaml`:
-
-Add a `_redirects` file in your `public` folder:
-```
-/*    /index.html   200
