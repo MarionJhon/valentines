@@ -120,13 +120,13 @@ function App() {
       <div className="w-full max-w-md space-y-3 sm:space-y-5 bg-white/40 backdrop-blur-xl rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl border-3 border-pink-200/50 flex flex-col items-center text-center">
         <h1
           className="greetings text-2xl sm:text-3xl md:text-4xl text-pink-700 leading-tight"
-          style={{ fontFamily: "'Great Vibes',cursive", fontWeight: 500 }}
+          style={{ fontFamily: "'Great Vibes',cursive", fontWeight: 600 }}
         >
           Hi my palangga, Cheena Ramos 💖
         </h1>
         <p
           className="text-lg sm:text-xl md:text-2xl text-pink-600"
-          style={{ fontFamily: "'Quicksand',sans-serif", fontWeight: 600 }}
+          style={{ fontFamily: "'Quicksand',sans-serif", fontWeight: 500 }}
         >
           Would you accept my Valentine’s card?
         </p>
